@@ -2,7 +2,7 @@ package com.amine_ezzahi.spring_ioc.service;
 
 import java.util.List;
 
-public interface IServiceProduit <T,Model>{
+public interface IServiceProduct<T,Model>{
     void addProduit(Model m);
     Model getProduitById(T t);
     List<Model> getAllProducts();

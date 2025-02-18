@@ -2,7 +2,7 @@ package com.amine_ezzahi.spring_ioc;
 
 
 import com.amine_ezzahi.spring_ioc.model.Produit;
-import com.amine_ezzahi.spring_ioc.service.IServiceProduit;
+import com.amine_ezzahi.spring_ioc.service.IServiceProduct;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -14,7 +14,7 @@ public class SpringIocApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext app = new AnnotationConfigApplicationContext(SpringIocApplication.class);
-		IServiceProduit produitservice = app.getBean(IServiceProduit.class);
+		IServiceProduct produitservice = app.getBean(IServiceProduct.class);
 		System.out.println("*******************************get all products **************************");
 		produitservice.getAllProducts().forEach(System.out::println);
 		System.out.println("******************************* find by id id = 3 **************************");

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Repository
-public class DaoProduct implements IDaoProuit<Long,Produit>{
+public class DaoProduct implements IDaoProduct<Long,Produit> {
     private static List<Produit> produits = new ArrayList<>();
     static{
         produits.add(Produit.builder().id(1L).name("Produit 1").pric(100d).quantity(100d).description("Description 1").build());

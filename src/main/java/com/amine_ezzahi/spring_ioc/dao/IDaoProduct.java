@@ -2,7 +2,7 @@ package com.amine_ezzahi.spring_ioc.dao;
 
 import java.util.List;
 
-public interface IDaoProuit <T,Model>{
+public interface IDaoProduct<T,Model>{
     void add(Model m);
     Model getById(T t);
     List<Model> getAll();

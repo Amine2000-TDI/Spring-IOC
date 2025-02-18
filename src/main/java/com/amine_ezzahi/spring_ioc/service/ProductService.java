@@ -1,17 +1,20 @@
 package com.amine_ezzahi.spring_ioc.service;
 
-import com.amine_ezzahi.spring_ioc.dao.IDaoProuit;
+import com.amine_ezzahi.spring_ioc.dao.IDaoProduct;
 import com.amine_ezzahi.spring_ioc.model.Produit;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ProductService implements IServiceProduit<Long, Produit>{
+public class ProductService implements IServiceProduct<Long, Produit> {
+
+    private IDaoProduct dao;
     @Autowired
-    private IDaoProuit dao;
+    public ProductService(IDaoProduct dao){
+        this.dao = dao;
+    }
 
     @Override
     public void addProduit(Produit p) {
