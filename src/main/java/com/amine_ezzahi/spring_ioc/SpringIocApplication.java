@@ -8,12 +8,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
-@ComponentScan(basePackages = "com.amine_ezzahi.spring_ioc")
+
 public class SpringIocApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext app = new AnnotationConfigApplicationContext(SpringIocApplication.class);
+		ApplicationContext app = new AnnotationConfigApplicationContext(AppConfig.class);
 		IServiceProduct produitservice = app.getBean(IServiceProduct.class);
 		System.out.println("*******************************get all products **************************");
 		produitservice.getAllProducts().forEach(System.out::println);

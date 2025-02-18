@@ -3,6 +3,7 @@ package com.amine_ezzahi.spring_ioc.service;
 import com.amine_ezzahi.spring_ioc.dao.IDaoProduct;
 import com.amine_ezzahi.spring_ioc.model.Produit;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,8 +11,8 @@ import java.util.List;
 @Service
 public class ProductService implements IServiceProduct<Long, Produit> {
 
+
     private IDaoProduct dao;
-    @Autowired
     public ProductService(IDaoProduct dao){
         this.dao = dao;
     }

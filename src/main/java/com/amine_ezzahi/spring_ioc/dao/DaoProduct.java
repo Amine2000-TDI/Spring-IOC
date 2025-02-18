@@ -1,6 +1,7 @@
 package com.amine_ezzahi.spring_ioc.dao;
 
 import com.amine_ezzahi.spring_ioc.model.Produit;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
